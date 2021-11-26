@@ -9,7 +9,7 @@ import ffmpeg
 from pprint import pprint
 # read the media file from the command line
 media_file = sys.argv[1]
-# extract metadata from the media file
+# extract metadata from the media file and store in a text file
 f = sys.argv[2]
 with open(f,'w') as fout:
     pprint(ffmpeg.probe(media_file)["streams"], stream=fout)
